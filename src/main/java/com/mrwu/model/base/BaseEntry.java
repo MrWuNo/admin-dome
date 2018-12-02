@@ -14,7 +14,7 @@ public abstract class BaseEntry implements Serializable {
     private Date updateDate;    // 更新时间
     private Integer createBy;   // 创建人
     private Integer updateBy;   // 更新人
-    private Integer del_flag;   // 逻辑删除（0：未删除，1：删除）
+    private Integer delFlag;   // 逻辑删除（0：未删除，1：删除）
 
     public Date getCreateDate() {
         return createDate;
@@ -48,11 +48,11 @@ public abstract class BaseEntry implements Serializable {
         this.updateBy = updateBy;
     }
 
-    public Integer getDel_flag() {
-        return del_flag;
+    public Integer getDelFlag() {
+        return delFlag;
     }
 
-    public void setDel_flag(Integer del_flag) {
-        this.del_flag = del_flag;
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
     }
 }

@@ -10,10 +10,7 @@
                         http://www.springframework.org/schema/tx
                         http://www.springframework.org/schema/tx/spring-tx.xsd">
     <!-- 自动扫描 -->
-    <context:component-scan base-package="com.mrwu">
-        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
-    </context:component-scan>
-
+    <context:component-scan base-package="com.mrwu"/>
     <!-- 引入数据库配置文件 -->
     <bean id = "propertyConfigurer"
           class = "org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
@@ -44,7 +41,7 @@
         <!-- 自动扫描mapping.xml文件 -->
         <property name = "mapperLocations">
             <list>
-                <value>com/mrwu/mapping/*Mapping.xml</value>
+                <value>classpath:/mapping/*Mapping.xml</value>
             </list>
         </property>
     </bean>
